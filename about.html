@@ -78,7 +78,7 @@ nav {
 /* About Section */
 
 .about {
-    background: linear-gradient(180deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+    background: linear-gradient(180deg, #00f, #800080); /* Changed gradient color to blue and purple */
     padding: 120px 0 60px 0;
     text-align: center;
 }
@@ -222,11 +222,12 @@ button:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: linear-gradient(to right, #000000, #434343); /* Added a gradient background */
     color: white;
     text-align: center;
     padding: 30px 0;
     font-size: 1rem;
+    border-top: 2px solid #5fabbe; /* Added a border-top for emphasis */
 }
 
 @media (max-width: 768px) {
@@ -318,49 +319,4 @@ footer {
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://www.greenscene.co.id/wp-content/uploads/2022/07/Gojo.jpg" alt="Aaradhy">
-                </div>
-                <div class="card-info">
-                    <h2 class="card-name">Aaradhy Gautam</h2>
-                    <p class="card-role">Co-Founder & CTO</p>
-                    <p class="card-email">aradhygautam19260R.spsstudent.ac.in</p>
-                    <button class="button">Contact</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://th.bing.com/th/id/R.e5a711c9f7bb18eca22caef766abb4f6?rik=Rn6iYFaTCpj50Q&riu=http%3a%2f%2fwww.nautiljon.com%2fimages%2fperso%2f00%2f15%2ftachibana_taki_14051.jpg%3f0&ehk=MutYHgGh1%2bAJj0kgVTNctJJE7us00Q3nsclKuAcV%2fPY%3d&risl=&pid=ImgRaw&r=0" alt="rareHop">
-                </div>
-                <div class="card-info">
-                    <h2 class="card-name">Gourav Lodhi</h2>
-                    <p class="card-role">Designer And Coder</p>
-                    <p class="card-email">gouravlodhi943@gmail.com</p>
-                    <button class="button">Contact</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 ATL Blog</p>
-    </footer>
-
-    <script>
-        function showFullText() {
-            const aboutText = document.getElementById('about-text');
-            const fullText = "ATL Blogs is your ultimate destination for all things tech in All over India! We're the go-to site for cutting-edge blogs about the vibrant ATL tech scene. Stay informed about exciting marathons, coding competitions, and hackathons happening in the city. Dive into our extensive coverage of future technologies, including AI, robotics, and innovative coding practices. Whether you're a tech enthusiast, a coding wizard, or simply curious about the latest in Atlanta's tech world, ATL Blogs has got you covered. Join our community to explore, learn, and stay ahead in the fast-paced world of technology right here in ATL! Our team of expert writers and tech enthusiasts work tirelessly to bring you the most up-to-date and insightful content. From in-depth tutorials to thought-provoking opinion pieces, we cover a wide range of topics to cater to all levels of tech expertise. At ATL Blogs, we believe in the power of knowledge sharing and community building. That's why we also feature guest posts from industry leaders and provide a platform for budding tech writers to showcase their talent. Join us in our mission to make technology accessible, exciting, and impactful for everyone in the ATL tech community and beyond!";
             
-            if (aboutText.innerHTML === fullText) {
-                aboutText.innerHTML = "ATL Blogs is your ultimate destination for all things tech in All over India! We're the go-to site for cutting-edge blogs about the vibrant ATL tech scene. Stay informed about exciting marathons, coding competitions, and hackathons happening in the city. Dive into our extensive coverage of future technologies, including AI, robotics, and innovative coding practices. Whether you're a tech enthusiast, a coding wizard, or simply curious about the latest in Atlanta's tech world, ATL Blogs has got you covered. Join our community to explore, learn, and stay ahead in the fast-paced world of technology right here in ATL!";
-                document.querySelector('.about-info button').textContent = 'Learn More';
-            } else {
-                aboutText.innerHTML = fullText;
-                document.querySelector('.about-info button').textContent = 'Show Less';
-            }
-        }
-    </script></body>
-
-</html>
