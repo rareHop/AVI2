@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+          href="style.css">
+    <title>About Us</title>
+</head>
+
+<body>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5fabbe;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #75b7e4;
+    border-radius: 4px;
+    color: white;
+}
+
+/* About Section */
+
+.about {
+    background: linear-gradient(180deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+    padding: 120px 0 60px 0;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.about-info {
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 1200px;
+}
+
+.about-img {
+    width: 25rem;
+    height: 25rem;
+    margin-right: 3rem;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-info p {
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    text-align: justify;
+}
+
+button {
+    border: none;
+    outline: 0;
+    padding: 12px 24px;
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: white;
+    background-color: #1a6cd8;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #475891;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Section */
+
+.team {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.team h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 20rem;
+    height: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 15rem;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info button {
+    margin: 1rem 0;
+}
+
+.card-name {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-role {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.card-email {
+    font-size: 1rem;
+    color: #13c4e4;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .about h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 80%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about-info p {
+        margin: 1rem 2rem;
+    }
+
+    .team h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+  </style>
+    <header>
+        <nav>
+            <div class="logo">ATL Blogs</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About Us</h1>
+        <p style="font-weight: bold; background: linear-gradient(to right, blue, purple); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore Atal Tinkering Lab Marathons Across India with ATL Blogs</p>
+        <div class="about-info">
+            <div class="about-img">
+                <img src="./Designer.png" alt="ATL Blog">
+            </div>
+            <div>
+                <p id="about-text">ATL Blogs is your ultimate destination for all things tech in All over India! We're the go-to site for cutting-edge blogs about the vibrant ATL tech scene. Stay informed about exciting marathons, coding competitions, and hackathons happening in the city. Dive into our extensive coverage of future technologies, including AI, robotics, and innovative coding practices. Whether you're a tech enthusiast, a coding wizard, or simply curious about the latest in Atlanta's tech world, ATL Blogs has got you covered. Join our community to explore, learn, and stay ahead in the fast-paced world of technology right here in ATL!</p>
+                <button onclick="showFullText()">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h1>Meet Our Team</h1>
+        <div class="team-cards">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/bf/b4/7e/bfb47ecb7d41a211a73c62c54bd71c10.jpg" alt="Agastya">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Agastya Pandey</h2>
+                    <p class="card-role">CEO and Founder</p>
+                    <p class="card-email">agastyapandeyR.spsstudent.ac.in</p>
+                    <button class="button">Contact</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://www.greenscene.co.id/wp-content/uploads/2022/07/Gojo.jpg" alt="Aaradhy">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Aaradhy Gautam</h2>
+                    <p class="card-role">Co-Founder & CTO</p>
+                    <p class="card-email">aradhygautam19260R.spsstudent.ac.in</p>
+                    <button class="button">Contact</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://th.bing.com/th/id/R.e5a711c9f7bb18eca22caef766abb4f6?rik=Rn6iYFaTCpj50Q&riu=http%3a%2f%2fwww.nautiljon.com%2fimages%2fperso%2f00%2f15%2ftachibana_taki_14051.jpg%3f0&ehk=MutYHgGh1%2bAJj0kgVTNctJJE7us00Q3nsclKuAcV%2fPY%3d&risl=&pid=ImgRaw&r=0" alt="rareHop">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Gourav Lodhi</h2>
+                    <p class="card-role">Designer And Coder</p>
+                    <p class="card-email">gouravlodhi943@gmail.com</p>
+                    <button class="button">Contact</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 GeeksforGeeks. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showFullText() {
+            const aboutText = document.getElementById('about-text');
+            const fullText = "ATL Blogs is your ultimate destination for all things tech in All over India! We're the go-to site for cutting-edge blogs about the vibrant ATL tech scene. Stay informed about exciting marathons, coding competitions, and hackathons happening in the city. Dive into our extensive coverage of future technologies, including AI, robotics, and innovative coding practices. Whether you're a tech enthusiast, a coding wizard, or simply curious about the latest in Atlanta's tech world, ATL Blogs has got you covered. Join our community to explore, learn, and stay ahead in the fast-paced world of technology right here in ATL! Our team of expert writers and tech enthusiasts work tirelessly to bring you the most up-to-date and insightful content. From in-depth tutorials to thought-provoking opinion pieces, we cover a wide range of topics to cater to all levels of tech expertise. At ATL Blogs, we believe in the power of knowledge sharing and community building. That's why we also feature guest posts from industry leaders and provide a platform for budding tech writers to showcase their talent. Join us in our mission to make technology accessible, exciting, and impactful for everyone in the ATL tech community and beyond!";
+            
+            if (aboutText.innerHTML === fullText) {
+                aboutText.innerHTML = "ATL Blogs is your ultimate destination for all things tech in All over India! We're the go-to site for cutting-edge blogs about the vibrant ATL tech scene. Stay informed about exciting marathons, coding competitions, and hackathons happening in the city. Dive into our extensive coverage of future technologies, including AI, robotics, and innovative coding practices. Whether you're a tech enthusiast, a coding wizard, or simply curious about the latest in Atlanta's tech world, ATL Blogs has got you covered. Join our community to explore, learn, and stay ahead in the fast-paced world of technology right here in ATL!";
+                document.querySelector('.about-info button').textContent = 'Learn More';
+            } else {
+                aboutText.innerHTML = fullText;
+                document.querySelector('.about-info button').textContent = 'Show Less';
+            }
+        }
+    </script></body>
+
+</html>
